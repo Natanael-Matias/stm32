@@ -206,11 +206,7 @@ typedef struct {
 	volatile tdr_bit_t TDR;		// Transmite date register
 } usart_reg_t;
 
-#define USART1_ADDR_BASE	APB2_ADDR
-#define USART2_ADDR_BASE	APB1_ADDR
-
-#define USART1_OFFSET		0x3800
-#define USART2_OFFSET		0x4400
-
-#define USART1				((usart_reg_t*)(USART1_ADDR_BASE + USART1_OFFSET))
-#define USART2				((usart_reg_t*)(USART2_ADDR_BASE + USART2_OFFSET))
+#define USART1				((usart_reg_t*)(APB2_ADDR + USART1_OFFSET))
+#define USART2				((usart_reg_t*)(APB1_ADDR + USART2_OFFSET))
+#define USART4				((usart_reg_t*)(APB1_ADDR + USART4_OFFSET))
+#define USART5				((usart_reg_t*)(APB1_ADDR + USART5_OFFSET))
